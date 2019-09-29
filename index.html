@@ -1,69 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-<style>
+<title>Europa</title> 
+<style> 
+/*a:hover{
+	cursor:pointer;
+	}
+a{
+	text-decoration:underline;
+	color:blue;
+
+}*/
+
 table {
-  font-family: arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
 
 td, th {
-  border: 1px solid #dddddd;
+  border: 1px solid #000000;
   text-align: left;
   padding: 8px;
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #dddddddc;
 }
+
+tr:nth-child(odd) {
+  background-color: #ffffffd8;
+}
+
+body {
+	background: url("https://gbf.wiki/images/c/c8/Npc_zoom_3040190000_02.png");
+	background-repeat: no-repeat;
+	background-size: auto;
+	height: 100%;
+	width: 100%;
+	background-position-y: 0px;
+	background-position-x: 380px;
+
+}
+
 </style>
 </head>
-<body>
-<h1>Europa</h1>
-<p>Discord Spark Bot for Granblue Fantasy.</p>
-<p><a href="https://discordapp.com/api/oauth2/authorize?client_id=585514230967566338&amp;permissions=201705536&amp;scope=bot">Click here</a> to invite her to your server!</p>
+<body>	
+<h1 style="text-align:center; font-size:300%; background-color: rgba(255, 255, 255, 0.356)">Europa</h1>
+<h3 style ="text-align:center; background-color: rgba(255, 255, 255, 0.356)">Discord Spark Bot for Granblue Fantasy. Made by ❄Cryo❄#4704.</h3>
 
-<h1>Commands</h1>
-
+<h1>Commands<hr></h1>
 <table>
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-  <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
-  </tr>
+	<tr>
+	  <th style="width: 500px;">Command</th>
+	  <th style="width: 600px;">Description</th>
+	  <th style="width: 250px">Examples</th>
+	  <th>Shortcuts</th>
+	</tr>
+	<tr>
+	  <td>$spark [crystals/tickets/10parts] [set/add/subtract] [number]</td>
+	  <td>Allows you to manage your spark profile.</td>
+	  <td>$spark crystals set 420 <br>$spark tix +1 <br>$spark xtals minus 3000</td>
+	  <td>Crystals &lt;=&gt; xtals <br>Tickets &lt;=&gt; tix <br>10parts &lt;=&gt; 10tix or 10p<br>add &lt;=&gt; +<br>subtract &lt;=&gt; - or minus</td>
+	</tr>
+	<tr>
+	  <td>$spark [create/reset/delete/profile] [nickname/username/@mention]</td>
+	  <td>Allows you to create, reset, delete, or display your spark profile. Also allows you to search for and display someone else's spark profile.</td>
+	  <td>$spark profile<br>$spark create<br>$spark profile Cryo</td>
+	  <td>$spark profile &lt;=&gt; $spark</td>
+	</tr>
+	<tr>
+	  <td>$time</td>
+	  <td>Displays the current time in Japan.</td>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <td>$translate [text] to [language]</td>
+	  <td>Translates the given text to the given language. If language is not given, output text will be in English. Supports most languages supported by Google Translate.</td>
+	  <td>$translate 雪花 to Spanish<br>$translate あなたのお母さんゲイ</td>
+	  <td></td>
+	</tr>
+	<tr>
+		<td>$help</td>
+		<td>Direct messages the list of commands to you (which is this website).</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+	  <td>=greeting [message/background/On/Off]</td>
+	  <td>Allows a moderator or higher role to customize and turn on/off the welcome message for new members. (Message refers to the message sent along with the image and not the one in the image itself).</td>
+	  <td>=greeting message Welcome to the server, @member!<br>=greeting background [img link]<br>=greeting on</td>
+	  <td></td>
+	</tr>
 </table>
-
-</body>
+<h1>Features<hr></h1>
+<p>Custom spark profile in the theme of Granblue Fantasy, complete with a progress bar and spark percentage.</p>
+<img src="https://i.imgur.com/Ho5hFzu.png">
+<p>Customizable join message for new members.</p>
+<img style="width:500px;height:170px;" src="https://i.imgur.com/SyiI9DR.png">
+</body>	
 </html>
-
