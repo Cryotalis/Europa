@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<title>Europa Bot</title> 
+<link rel = "stylesheet"
+    type = "text/css"
+    href = "styles.css"
+/>
+</head>
+<body>
+<div class="topnav">
+    <button class="invite" type="button" onclick="window.open('https://discordapp.com/api/oauth2/authorize?client_id=585514230967566338&permissions=201705536&scope=bot', '_blank')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add Europa</button>	   
+    <a href="index.html" id="home">Home</a>
+    <a class="active" href="news.html">News</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="faq.html">FAQ</a>
+</div>
+<button onclick="window.location.href = '#home';" id="myBtn" title="Go to top">Top</button>
+<script>
+        //Get the button:
+        mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 400px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+</script>
+<br><br><br>
+<img style="float:left;margin-left: 450px;border-radius:50%;" src="https://i.imgur.com/FAKziGX.png"/>
+<h1 style="text-align:left; font-size:300%; margin-left:600px;" id="Title">Europa</h1>
+<h4 style="text-align:left;margin-top: -30px;margin-left:601px;">Discord Spark Bot for Granblue Fantasy. Made by ❄Cryo❄#4704.</h4>
+<br>
+<h1>What's New?<hr></h1>
+<h3>New Command: $player [name/id] [PlayerName/PlayerID]</h3>
+<p>$player allows you to search for a player given their ID or their name! In addition to information about the player's<br>current loadout, you'll also be able to see what their support summons are and their star character. </p>
+<h3>New Command: $crew [name/id] [CrewName/CrewID]</h3>
+<p>$crew allows you to search for a crew given their ID or their name! You'll be able to see the crew's rank in the last<br>Unite and Fight (guild war) as well as their name history.</p>
+<h3>New Commands: $bugreport and $feedback</h3>
+<p>These commands will allow you to report bugs to me or give me some feedback!</p>
+<br><i style="font-size: small;">For information on how to use any of these commands, please see the command list.</i>
+<br>
+<h1>Changes and Improvements<hr></h1>
+<strong>$Spark</strong>
+<ul>
+    <li>You can now set all your spark resources with one command! See the command list for more information.</li>
+    <ul><li>Thanks to Alvin for suggesting this.</li></ul>
+    <li>$spark add/subtract/set now tells you how many total draws you have after adding to/subtracting from/setting your spark resources.</li>
+    <li>If you have over 100% progress towards a spark, the portion of the progress bar that would overflow is now layered on top and<br>colored red instead (just like GBF characters who have 200% charge bar limit).</li>
+    <ul><li>Thanks to Dopemeister for suggesting this.</li></ul>
+    <li>Added support for Japanese characters, as well as many other characters to be displayed in the spark profile.</li>
+    <ul><li>Thanks to マムクート for bringing this up to me.</li></ul>
+</ul>
+<strong>Miscellaneous</strong>
+<ul>
+    <li>Added a sky blue gradient background to Europa's profile picture.</li>
+    <li>Made massive improvements to this website.</li>
+</ul>
+<br>
+<h1>Bug Fixes<hr></h1>
+<ul>
+    <li>Fixed a bug affecting roughly 1% of users that prevented them from successfully creating a spark profile and tracking their sparks.</li>
+    <ul><li>Thanks to Kish for helping me resolve this issue.</li></ul>
+    <li>Fixed a bug that would cause duplicate server profiles to be created for the greeting feature if Europa was kicked and<br>re-invited to a server. I'm unsure as to whether this has actually affected anyone.</li>
+</ul>
+<p></p>
+</body>
+</html>
