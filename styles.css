@@ -100,6 +100,10 @@ button.invite:hover {
   background-color: rgb(134, 134, 134); /* Add a dark-grey background on hover */
 }
 
+.wrap {
+  display: inline-block;
+}
+
 .features {
     display: inline-block;
     max-width: 700px;
@@ -113,6 +117,19 @@ button.invite:hover {
     margin-top: 60px;
     color: black;
     position: absolute;
+}
+
+.image{
+  display: inline-block;
+  height:auto;
+}
+
+.text{
+  display: inline-block;
+  text-align:center;
+  position: absolute;
+  vertical-align: top;
+  width:40%;
 }
 
 ul {
