@@ -32,7 +32,7 @@ table {
       padding: 15px 32px;
       text-align: left;
       display: inline-block;
-      font-size: 16px;
+      font-size: 16pxvw;
       background: url(https://discordapp.com/assets/28174a34e77bb5e5310ced9f95cb480b.png);
       background-size: 25%;
       background-position-y: 5px;
@@ -61,7 +61,7 @@ table {
     text-align: right;
     padding: 14px 16px;
     text-decoration:none;
-    font-size: 17px;
+    font-size: 17pxvw;
   }
   
   /* Change the color of links on hover */
@@ -93,7 +93,7 @@ table {
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 15px; /* Some padding */
     border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
+    font-size: 18pxvw; /* Increase font size */
   }
   
   #myBtn:hover {
@@ -102,16 +102,20 @@ table {
 
   .features {
       float: right;
-      font-size: 20px;
+      margin-right:13%;
+      font-size: 20pxvw;
       border: 2px solid grey;
       border-radius: 15px;
       padding: 10px;
       background-color: #f1f7fa;
       margin-top: 60px;
-      margin-right: 120px;
       color: black;
   }
 
   ul {
     line-height: 30px;
+  }
+
+  img {
+    max-width:100%;
   }
