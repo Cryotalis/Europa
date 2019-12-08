@@ -127,7 +127,6 @@ button.invite:hover {
 .text{
   display: inline-block;
   position: absolute;
-  vertical-align: top;
   right: 4.5%;
   left: 45%;
 }
