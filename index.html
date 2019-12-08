@@ -1,89 +1,65 @@
 <!doctype html>
 <html>
 <head>
-<title>Europa</title> 
-<style> 
-
-table {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #000000;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddddc;
-}
-
-tr:nth-child(odd) {
-  background-color: #ffffffd8;
-}
-
-body {
-	background: url("https://gbf.wiki/images/c/c8/Npc_zoom_3040190000_02.png");
-	background-repeat: no-repeat;
-	background-size: auto;
-	height: 100%;
-	width: 100%;
-	background-position-y: 30px;
-	background-position-x: center;
-
-}
-
-button {
-	border: none;
-	color: white;
-	padding: 15px 32px;
-	text-align: left;
-	display: inline-block;
-	font-size: 16px;
-	background: url(https://discordapp.com/assets/28174a34e77bb5e5310ced9f95cb480b.png);
-	background-size: 25%;
-	background-position-y: 5px;
-	background-position-x: 5px;
-	background-repeat: no-repeat;
-	background-color:rgb(115, 139, 217);
-}
-button:hover {
-	background-color:rgb(103, 122, 192);
-	cursor: pointer;
-}
-
-</style>
+<title>Europa Bot</title> 
+<link rel = "stylesheet"
+    type = "text/css"
+    href = "styles.css"
+/>
 </head>
 <body>
-<button type="button" onclick="window.open('https://discordapp.com/api/oauth2/authorize?client_id=585514230967566338&permissions=201705536&scope=bot', '_blank')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add Europa</button>	
-<h1 style="text-align:center; font-size:300%; background-color: rgba(255, 255, 255, 0.356)">Europa</h1>
-<h3 style ="text-align:center; background-color: rgba(255, 255, 255, 0.356)">Discord Spark Bot for Granblue Fantasy. Made by ❄Cryo❄#4704.</h3>
+<div class="topnav">
+    <button class="invite" type="button" onclick="window.open('https://discordapp.com/api/oauth2/authorize?client_id=585514230967566338&permissions=201705536&scope=bot', '_blank')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add Europa</button>	   
+    <a class="active" href="index.html" id="home">Home</a>
+    <a href="news.html">News</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="faq.html">FAQ</a>
+</div>
+<button onclick="window.location.href = '#home';" id="myBtn" title="Go to top">Top</button>
+<script>
+        //Get the button:
+        mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 400px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+</script>
+<br><br><br>
+<img style="float:left;margin-left: 450px;border-radius:50%;" src="https://i.imgur.com/FAKziGX.png"/>
+<h1 style="text-align:left; font-size:300%; margin-left:600px;" id="Title">Europa</h1>
+<h4 style="text-align:left;margin-top: -30px;margin-left:601px;">Discord Spark Bot for Granblue Fantasy. Made by ❄Cryo❄#4704.</h4>
+<br>
 <h1>Commands<hr></h1>
 <table>
 	<tr>
-	  <th style="width: 400px;">Command</th>
-	  <th style="width: 600px;">Description</th>
-	  <th style="width: 240px">Examples</th>
-	  <th style="width: 200px">Shortcuts</th>
+	  <th style="width: 400px;background-color:#0475b3;color:white">Command</th>
+	  <th style="width: 600px;background-color:#0475b3;color:white">Description</th>
+	  <th style="width: 240px;background-color:#0475b3;color:white">Examples</th>
+	  <th style="width: 200px;background-color:#0475b3;color:white">Shortcuts</th>
 	</tr>
 	<tr>
-	  <td>$spark [crystals/tickets/10parts] [set/+/-] [number]</td>
-	  <td>Allows you to manage your spark profile. If you prefer the legacy look of the spark profile, use $sparkle instead.</td>
+	  <td>$spark [set/+/-] [crystals/tickets/10parts] [number]</td>
+	  <td>Allows you to manage your spark profile. You may set all 3 resources with one command by using <b>$spark set X crystals, Y tickets, Z 10parts</b>. If you prefer the legacy look of the spark profile, use <b>$sparkle</b> instead.</td>
 	  <td>$spark crystals set 420 <br>$spark tix +1 <br>$spark xtals minus 3000</td>
 	  <td>Crystals ⇄ xtals <br>Tickets ⇄ tix <br>10parts ⇄ 10tix or 10p</td>
 	</tr>
 	<tr>
 	  <td>$spark [create/reset/delete/profile] [user]</td>
-	  <td>Allows you to create, reset, delete, or display your spark profile. Also allows you to search for and display someone else's spark profile. If you prefer the legacy look of the spark profile, use $sparkle instead.</td>
+	  <td>Allows you to create, reset, delete, or display your spark profile. Also allows you to search for and display someone else's spark profile. If you prefer the legacy look of the spark profile, use <b>$sparkle</b> instead.</td>
 	  <td>$spark profile<br>$spark create<br>$spark profile Cryo</td>
 	  <td>$spark profile ⇄ $spark</td>
 	</tr>
 	<tr>
 	  <td>$time</td>
 	  <td>Displays the current time in Japan.</td>
-	  <td></td>
+	  <td>$time</td>
 	  <td></td>
 	</tr>
 	<tr>
@@ -91,31 +67,72 @@ button:hover {
 	  <td>Translates the given text to the given language. If language is not given, output text will be in English. Supports most languages supported by Google Translate.</td>
 	  <td>$translate 雪花 to Japanese<br>$translate エウロペ</td>
 	  <td></td>
+    </tr>
+    <tr>
+        <td>$crew [name/id] [CrewName/CrewID]</td>
+        <td>Searches for a crew given crew name or crew ID.</td>
+        <td>$gw name Mint<br>$gw id 1655580</td>
+        <td></td>
 	</tr>
+    <tr>
+        <td>$player [name/id] [PlayerName/PlayerID]</td>
+        <td>Searches for a player given player name or player ID.</td>
+        <td>$player name Europa<br>$player id 1655580</td>
+        <td></td>
+	</tr>
+    <tr>
+        <td>$feedback [feedback]</td>
+        <td>Send feedback to me regarding Europa.</td>
+        <td>$feedback Europa is awesome!</td>
+        <td></td>
+	</tr>
+    <tr>
+        <td>$bugreport [bug]</td>
+        <td>Report a bug to me.</td>
+        <td>$bugreport $spark isn't working.</td>
+        <td></td>
+    </tr>
 	<tr>
 		<td>$help</td>
 		<td>Direct messages the list of commands to you (which is this website).</td>
-		<td></td>
+		<td>$help</td>
 		<td></td>
 	</tr>
 	<tr>
 	  <td>=greeting [msg/bg/channel/display/on/off]</td>
-	  <td>Allows an Administrator to customize and turn on/off the welcome message for new members. Use "@member" in your message if you'd like the new member to be pinged. BG accepts both image links and image uploads, set BG to "default" for the default background. Channel accepts both channel ID and channel mentions. Greeting is off by default.</td>
+	  <td>Allows an Administrator to customize and turn on/off the welcome message for new members. Use <b>@member</b> in your message if you'd like the new member to be pinged. BG accepts both image links and image uploads. Set BG to <b>default</b> for the default background. Channel accepts both channel ID and channel mentions. Greeting is off by default.</td>
 	  <td>=greeting msg Welcome to the server, @member!<br>=greeting bg [image link]<br>=greeting on<br>=greeting channel #welcome</td>
 	  <td>$greeting on/off ⇄ $greeting</td>
 	</tr>
 </table>
 <h1>Features<hr></h1>
-<p style="font-size: 130%;float:right;margin-right: 120px;margin-top:0px;">Automatically updates spark counters in nicknames.<br>Opt-in by using this format: (xxx/300).</p>
-<p style="font-size:130%">Custom spark profile in the theme of Granblue Fantasy,<br>complete with a progress bar and spark percentage.</p>
-<img src="https://i.imgur.com/Ho5hFzu.png">
-<div style="width:440px; height:575px; overflow: hidden; float: right;margin-right:110px;margin-top: 0px;">
-		<iframe src='https://gfycat.com/ifr/milkyuncomfortableadeliepenguin?hd=1' style="position: relative; left: -415px; top: -8px;" frameborder='0' scrolling='no' width='1250' height='650' allowfullscreen ></iframe>
+<h2 style="margin-left:575px;position:absolute;">Customized Spark Profile</h2>
+<div class="features">
+    <p style="font-size:130%;margin-top:5px;margin-bottom:10px;">Granblue Fantasy themed, includes a progress bar with spark<br>percentage.<br><br>You'll get a congratulatory message when you reach 100% <br>spark progress, and the progress bar will overflow until 200%. </p>
 </div>
-<p style="font-size: 130%">Customizable join message for new members.</p>
-<img style="width:500px;height:170px;margin-left: 12px" src="https://i.imgur.com/SyiI9DR.png">
-<h1>Contact<hr></h1>
-<p>Got a suggestion, or found a problem? Join my <a href="https://discord.gg/YtwzVSp">Discord Server</a> or contact me directly via PM on Discord at ❄Cryo❄#4704.</p>
+<img style="position:absolute" src="https://i.imgur.com/OqWuRTo.png"> 
+
+<h2 style="margin-top:360px;margin-left:575px;position:absolute;">Customizable Join Message</h2>
+<div style = "margin-top: 155px;"class="features">
+    <p style="font-size:130%;margin-top:5px;margin-bottom:10px;">Customize the background and join message, change the&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>channel the message is sent in, and use the display option to<br>see what the message looks like before you enable it.</p>
+</div>
+<img style="border: 2px solid grey;border-radius: 15px;margin-top:350px;margin-left:14px;position:absolute" src="https://i.imgur.com/W3k3Ikc.png">
+
+<h2 style="margin-top:620px;margin-left:575px;position:absolute;">Auto-Updating Spark Counters</h2>
+<div style = "margin-top: 130px;"class="features">
+    <p style="font-size:130%;margin-top:5px;margin-bottom:10px;">Make the spark counter in your nickname automatically&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>update as you key in your spark funds.<br><br>Accepted formats: (000/300) & 00.00%</p>
+</div>
+<video preload="true" autoplay="" loop="" style="height: 510px; border-radius: 10px; margin-left:auto; margin-right:auto; display:block"><source src="https://i.imgur.com/5qXmRYX.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<h1 id="contact">Contact<hr></h1> 
+<p>Need to talk to me in person about a suggestion or a bug? Join my <a href="https://discord.gg/YtwzVSp">Discord Server</a> or contact me directly via PM (you need to add me as a friend to do this) on Discord at ❄Cryo❄#4704.<br>Invite me to your discord servers too if you'd like, I'm happy to come <strike>lurk</strike> hang out!</p>
 <iframe src="https://discordapp.com/widget?id=379501550097399810&theme=dark" width="350" height="400" allowtransparency="true" frameborder="0"></iframe>
 </body>	
 </html>
+
+<!--
+    <div style="width:440px; height:575px; overflow: hidden; float: right;margin-right:240px;margin-top: 0px;">
+		<iframe src='https://gfycat.com/ifr/milkyuncomfortableadeliepenguin?hd=1' style="position: relative; left: -455px; top: -8px;" frameborder='0' scrolling='no' width='1325' height='650' allowfullscreen ></iframe>
+</div>
+    <p style="font-size:130%">Customizable join message for new members.</p>
+    <p style="font-size:130%">Automatically updates spark counters in nicknames.<br>Opt-in by using one of these formats: (000/300) or 00.00%.</p>-->
