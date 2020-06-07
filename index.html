@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html id="home">
 <head>
 <title>Europa Bot</title> 
 <link rel = "stylesheet"
@@ -9,11 +9,12 @@
 </head>
 <body>
 <div class="topnav">
-    <button class="invite" type="button" onclick="window.open('https://discordapp.com/api/oauth2/authorize?client_id=585514230967566338&permissions=470149184&scope=bot', '_blank')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add Europa</button>	   
-    <a class="active" href="index.html" id="home">Home</a>
-    <a href="news.html">News</a>
+    <button class="discord" type="button" onclick="window.open('https://discordapp.com/api/oauth2/authorize?client_id=585514230967566338&permissions=470149184&scope=bot', '_blank')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add Europa</button>	 
+    <button class="patreon" type="button" onclick="window.open('https://www.patreon.com/cryotalis', '_blank')">>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patreon&nbsp;&nbsp;&nbsp;&nbsp;</button>	
+    <a class="active" href="index.html">Home</a>
+    <a href="patch.html">Patch Notes</a>
+    <a href="upcoming.html">Upcoming</a>
     <a href="index.html#contact">Contact</a>
-    <a href="faq.html">FAQ</a>
 </div>
 <button onclick="window.location.href = '#home';" id="myBtn" title="Go to top">Top</button>
 <script>
@@ -38,6 +39,7 @@
 <h4 style="text-align:left;margin-top: -30px;margin-left:601px;">Discord Bot for Granblue Fantasy. Made by ❄Cryo❄#4704.</h4>
 <br>
 <h1>Commands<hr></h1>
+<h2>General Commands</h2>
 <table>
 	<tr>
 	  <th style="width: 400px;background-color:#0475b3;color:white">Command</th>
@@ -56,46 +58,70 @@
 	  <td>Allows you to create, reset, delete, or display your spark profile. Also allows you to search for and display someone else's spark profile. If you prefer the legacy look of the spark profile, use <b>$sparkle</b> instead.</td>
 	  <td>$spark profile<br>$spark create<br>$spark profile Cryo</td>
 	  <td>$spark profile ⇄ $spark</td>
+  </tr>
+  <tr>
+	  <td>$spark background [link]</td>
+	  <td>Sets a custom background for your spark profile. Using <strong>$spark background</strong> without a link will reset your background to the default background. You can also set your background by uploading an image along with the command.</td>
+	  <td>$spark background [img link]</td>
+	  <td></td>
 	</tr>
-	<tr>
+  <tr>
+    <td>$crew [name/id] [CrewName/CrewID]</td>
+    <td>Searches for a crew given crew name or crew ID.</td>
+    <td>$crew name Mint<br>$crew id 1655580</td>
+    <td></td>
+	</tr>
+  <tr>
+    <td>$player [name/id] [PlayerName/PlayerID]</td>
+    <td>Searches for a player given player name or player ID.</td>
+    <td>$player name Europa<br>$player id 21213996</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>$events</td>
+    <td>Displays current and upcoming events. Use <strong>$event</strong> if you prefer the text only version of the command.</td>
+    <td>$events</td>
+    <td></td>
+  </tr>
+  <tr>
+	  <td>$translate [text] to [language]</td>
+	  <td>Translates the given text to the given language. If language is not given, output text will be in English. Supports most languages supported by Google Translate.</td>
+	  <td>$translate 雪花 to Japanese<br>$translate エウロペ</td>
+	  <td></td>
+  </tr>
+  <tr>
+    <td>$ask</td>
+    <td>Ask Europa a yes/no question.</td>
+    <td>$ask do I yeet rolls?</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>$choose</td>
+    <td>Ask Europa to choose between 2 or more things.</td>
+    <td>$choose homework, gbf</td>
+    <td></td>
+  </tr>
+  <tr>
 	  <td>$time</td>
 	  <td>Displays the current time in Japan.</td>
 	  <td>$time</td>
 	  <td></td>
 	</tr>
-	<tr>
-	  <td>$translate [text] to [language]</td>
-	  <td>Translates the given text to the given language. If language is not given, output text will be in English. Supports most languages supported by Google Translate.</td>
-	  <td>$translate 雪花 to Japanese<br>$translate エウロペ</td>
-	  <td></td>
-    </tr>
-    <tr>
-        <td>$crew [name/id] [CrewName/CrewID]</td>
-        <td>Searches for a crew given crew name or crew ID.</td>
-        <td>$crew name Mint<br>$crew id 1655580</td>
-        <td></td>
+  <tr>
+    <td>$feedback [feedback]</td>
+    <td>Send feedback for Europa to me.</td>
+    <td>$feedback Europa is awesome!</td>
+    <td></td>
 	</tr>
-    <tr>
-        <td>$player [name/id] [PlayerName/PlayerID]</td>
-        <td>Searches for a player given player name or player ID.</td>
-        <td>$player name Europa<br>$player id 1655580</td>
-        <td></td>
-	</tr>
-    <tr>
-        <td>$feedback [feedback]</td>
-        <td>Send feedback to me regarding Europa.</td>
-        <td>$feedback Europa is awesome!</td>
-        <td></td>
-	</tr>
-    <tr>
-        <td>$bugreport [bug]</td>
-        <td>Report a bug to me.</td>
-        <td>$bugreport $spark isn't working.</td>
-        <td></td>
-    </tr>
+  <tr>
+    <td>$bugreport [bug]</td>
+    <td>Report a bug to me.</td>
+    <td>$bugreport $spark isn't working.</td>
+    <td></td>
+  </tr>
 	<tr>
 		<td>$help</td>
-		<td>Direct messages the list of commands to you (which is this website).</td>
+		<td>Displays a link to this website and a link to Europa's support server.</td>
 		<td>$help</td>
 		<td></td>
 	</tr>
@@ -106,12 +132,45 @@
 	  <td>$greeting on/off ⇄ $greeting</td>
 	</tr>
 </table>
+<h2>Role Commands</h2>
+<table>
+  <tr>
+	  <th style="width: 400px;background-color:#0475b3;color:white">Command</th>
+	  <th style="width: 600px;background-color:#0475b3;color:white">Description</th>
+	  <th style="width: 240px;background-color:#0475b3;color:white">Examples</th>
+	  <th style="width: 200px;background-color:#0475b3;color:white">Shortcuts</th>
+  </tr>
+  <tr>
+		<td>=roles [add/remove] [role] to category [category]</td>
+		<td>Add a role to or remove a role from the list of available roles. Category is optional.</td>
+		<td>=roles add Europa to category M2<br>=roles add UBHL<br>=roles remove cursed</td>
+		<td></td>
+  </tr>
+  <tr>
+		<td>$addrole [role]</td>
+		<td>Add a role to yourself.</td>
+		<td>$addrole Europa<br>$addrole NSFW</td>
+		<td></td>
+  </tr> 
+  <tr>
+		<td>$removerole [role]</td>
+		<td>Remove a role from yourself.</td>
+		<td>$remove Grimnir<br>$removerole cursed</td>
+		<td></td>
+  </tr>   
+  <tr>
+		<td>$listroles</td>
+		<td>Shows the list of available roles.</td>
+		<td>$listroles</td>
+		<td></td>
+	</tr>
+</table>
 <h1>Features<hr></h1>
 <div style="display:table;" class="wrap">
   <img style="width: 100%;" class="image" src="https://i.imgur.com/OqWuRTo.png"> 
   <section class="text"><h2>Customized Spark Profile</h2>  </section>
   <div class="features">  
-      <p style="font-size:130%;margin-top:5px;margin-bottom:10px;">Granblue Fantasy themed, includes a progress bar with spark percentage.<br><br>You'll get a congratulatory message when you reach 100% spark progress, and the progress bar will overflow until 200%. </p>
+      <p style="font-size:130%;margin-top:5px;margin-bottom:10px;">Granblue Fantasy themed, includes a progress bar with spark percentage.<br><br>You'll get a congratulatory message when you reach 100% spark progress, and the progress bar can overflow until 200%. </p>
   </div>
 </div>
 <br><br><br>
@@ -154,22 +213,9 @@
     </div>
 </div>
 
-<!-- <h2 style="margin-left:45%;position:absolute;display:inline-block">Customizable Join Message</h2>
-<div style="display:inline"class="features">
-    <p style="font-size:130%;margin-top:5px;margin-bottom:10px;">Customize the background and join message, change the channel the message is sent in, and use the display option to see what the message looks like before you enable it.</p>
-</div>
-<img style="border: 2px solid grey;border-radius: 15px;margin-top:350px;margin-left:14px;position:absolute" src="https://i.imgur.com/W3k3Ikc.png">
-
-<h2 style="top:225%;bottom:auto;margin-left:45%;position:absolute;">Auto-Updating Spark Counters</h2>
-<div style = "top:225%"class="features">
-    <p style="font-size:130%;margin-top:5px;margin-bottom:10px;">Make the spark counter in your nickname automatically update as you key in your spark funds.<br><br>Accepted formats: (000/300) & 00.00%<br><br>Europa's role must be in a higher position than the roles of those whose nicknames she is trying to update in order for this to work.<br><br>This also does not work for the server owner.</p>
-</div>
-<div style="margin-top:650px;width: 500px;overflow:hidden;display:block;border-radius: 20px;border: 2px solid grey">
-  <video preload="true" autoplay="" loop="" style="height: 510px; margin-left:-205px; margin-right:0%; display:block"><source src="https://i.imgur.com/0IczLVV.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-</div> -->
 <br><br><br>
 <h1 id="contact">Contact<hr></h1> 
-<p>Need to talk to me in person about a suggestion or a bug? Join my <a href="https://discord.gg/YtwzVSp">Discord Server</a> or contact me directly via PM (you need to add me as a friend to do this) on Discord at ❄Cryo❄#4704.<br>Invite me to your discord servers too if you'd like, I'm happy to come <strike>lurk</strike> hang out!</p>
+<p>Need to talk to me in person about a suggestion or a bug? Join my <a href="https://discord.gg/YtwzVSp" style="color:cornflowerblue">Discord Server</a> or contact me directly via PM (you need to add me as a friend to do this) on Discord at ❄Cryo❄#4704.<br>Invite me to your discord servers too if you'd like, I'm happy to come <strike>lurk</strike> hang out!</p>
 <iframe src="https://discordapp.com/widget?id=379501550097399810&theme=dark" width="350" height="400" allowtransparency="true" frameborder="0"></iframe>
 </body>	
 </html>

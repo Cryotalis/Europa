@@ -26,13 +26,14 @@ body {
     color: rgb(223, 223, 223)
 }
 
-button.invite {
+button.discord {
+    outline:none;
+    float: left;
     border: none;
     color: white;
     padding: 15px 32px;
     text-align: left;
-    display: inline-block;
-    font-size: 16px;
+    font-size: 18px;
     background: url(https://discordapp.com/assets/28174a34e77bb5e5310ced9f95cb480b.png);
     background-size: 25%;
     background-position-y: 5px;
@@ -41,10 +42,33 @@ button.invite {
     background-color:rgb(115, 139, 217);
 }
 
-button.invite:hover {
+button.patreon {
+  outline:none;
+  margin-left: 10px;
+  float: left;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: left;
+  font-size: 18px;
+  background: url(https://i.imgur.com/apPUwDj.png);
+  background-size: 20%;
+  background-position-y: 8px;
+  background-position-x: 10px;
+  background-repeat: no-repeat;
+  background-color:#F86754;
+}
+
+button.discord:hover {
     background-color:rgb(103, 122, 192);
     cursor: pointer;
 }
+
+button.patreon:hover {
+  background-color:#E6503C;
+  cursor: pointer;
+}
+
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -56,12 +80,12 @@ button.invite:hover {
 .topnav a {
   float: left;
   position: relative;
-  right: -25%;
+  right: -12%;
   color: rgb(223, 223, 223);
   text-align: right;
   padding: 14px 16px;
   text-decoration:none;
-  font-size: 17px;
+  font-size: 18px;
 }
 
 /* Change the color of links on hover */
@@ -74,10 +98,6 @@ button.invite:hover {
 .topnav a.active {
   background-color: #42a5f5;
   color: white;
-}
-
-.invite {
-    float: left;
 }
 
 #myBtn {
@@ -138,4 +158,21 @@ ul {
 img {
   max-width: 100%;
   height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }

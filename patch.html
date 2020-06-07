@@ -1,0 +1,87 @@
+<!doctype html>
+<html id="home">
+<head>
+<title>Europa Bot</title> 
+<link rel = "stylesheet"
+    type = "text/css"
+    href = "styles.css"
+/>
+</head>
+<body>
+<div class="topnav">
+  <button class="discord" type="button" onclick="window.open('https://discordapp.com/api/oauth2/authorize?client_id=585514230967566338&permissions=470149184&scope=bot', '_blank')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add Europa</button>	 
+  <button class="patreon" type="button" onclick="window.open('https://www.patreon.com/cryotalis', '_blank')">>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patreon&nbsp;&nbsp;&nbsp;&nbsp;</button>	
+    <a href="index.html" id="home">Home</a>
+    <a class="active" href="patch.html">Patch Notes</a>
+    <a href="upcoming.html">Upcoming</a>
+    <a href="index.html#contact">Contact</a>
+</div>
+<button onclick="window.location.href = '#home';" id="myBtn" title="Go to top">Top</button>
+<script>
+        //Get the button:
+        mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 400px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+</script>
+<br><br><br>
+<img style="float:left;margin-left: 450px;border-radius:50%;" src="https://i.imgur.com/f0MfwDw.png"/>
+<h1 style="text-align:left; font-size:300%; margin-left:600px;" id="Title">Europa</h1>
+<h4 style="text-align:left;margin-top: -30px;margin-left:601px;">Discord Bot for Granblue Fantasy. Made by ❄Cryo❄#4704.</h4>
+<br>
+<h1>What's New? (Update V2)<hr></h1>
+<h3>New Role System</h3>
+<p>Your typical role system. Administrators can add/remove roles to/from a list of roles with =roles. Regular users can view <br>the list of roles with $listroles, add roles to themself with $addrole, and remove roles from themself with $removerole. <br>Additionally, Administrators can organize roles into groups by adding them to a category.</p>
+<img src="https://i.imgur.com/kXep2xu.png">
+<h3>New Events Commands</h3>
+<p>$event displays a plain text list of current and upcoming events, while $events displays a list of current and upcoming events with images.</p>
+<div class="row">
+  <div class="column">
+    <br><br>
+    <img src="https://i.imgur.com/gWwbbPs.png" alt="Event">
+  </div>
+  <div class="column">
+    <img src="https://i.imgur.com/7UzMc1o.png" alt="Events">
+  </div>
+</div>
+<h3>Set Custom Spark Backgrounds</h3>
+<p>You can now set a custom background for your spark profile.</p>
+<h3>New "Fun" Commands</h3>
+<p>$ask Europa a question, or ask Europa to $choose between two or more things. </p>
+<br><i style="font-size: small;">For information on how to use any of these commands, please see the command list.</i>
+<br><br>
+<h1>Changes and Improvements<hr></h1>
+<strong>$player and $crew</strong>
+<ul>
+    <li>The "Maximum Capacity Reached" error message should appear less often, and capacity should now be freed faster.</li>
+    <li>Added page number to player search when searching by name.</li>
+    <li>Added error message for when GBF is undergoing maintenance.</li>
+    <li>Player ID is now included in the screenshot in place of class name and class level.</li>
+    <li>Crew ID is now placed underneath Crew name in the embedded message, and is also placed at the top of the screenshot.</li>
+    <li>Improved speed and stability.</li>
+</ul>
+<strong>Miscellaneous</strong>
+<ul>
+    <li>$help command now sends the website link to the channel the command was called in instead of sending a DM.</li>
+    <li>Leave and ban messages have been added to the $greeting system.</li>
+    <li>Replaced the <strong>FAQ</strong> page with the <strong><a href="upcoming.html" style="color:cornflowerblue">Upcoming</a></strong> page. The <strong><a href="upcoming.html" style="color:cornflowerblue">Upcoming</a></strong> page will contain information about future plans with <br>regards to Europa.</li>
+</ul> 
+<br>
+<h1>Bug Fixes<hr></h1>
+<ul>
+    <li>Feedback and Bugreport commands now send an error message when the bug report or feedback is left blank.</li>
+    <li>Player search by name no longer requires the Manage Messages permission to work correctly. It will continue running<br>without clearing all reactions if Europa is not given the Manage Messages permission.</li>
+    <li>Fixed bug where spark profile names were not being centered when using spark profile search.</li>
+    <li>You can no longer set your spark count to a negative number.</li>
+</ul>
+<br><br><br><br><br>
+</body>
+</html>
