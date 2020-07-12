@@ -6,8 +6,6 @@ body {
 
 button.discord {
     outline:none;
-    position:absolute;
-    left: 10px;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -28,8 +26,7 @@ button.discord:hover {
 
 button.patreon {
   outline:none;
-  position:absolute;
-  left:200px;
+  margin-left:5px;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -50,16 +47,17 @@ button.patreon:hover {
 
 /* Add a black background color to the top navigation */
 .topnav {
+  position:relative;
+  top:-51px;
   background-color:#414141;
   overflow: hidden;
   margin:auto;
   width:430px;
 }
 
-@media screen and (max-width:800px){
+@media screen and (max-width:1220px){
   .topnav {
-    position:absolute;
-    top:70px;
+    top:10px;
     left:10px;
   }
   button.discord{
