@@ -3,134 +3,147 @@
 <head>
 <title>Europa Bot</title> 
 <link rel = "stylesheet"
-    type = "text/css"
-    href = "styles.css"
+  type = "text/css"
+  href = "styles.css"
 />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+
+<button class="discord" type="button" onclick="window.open('https://discordapp.com/api/oauth2/authorize?client_id=585514230967566338&permissions=470149184&scope=bot', '_blank')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add Europa</button>	 
+<button class="patreon" type="button" onclick="window.open('https://www.patreon.com/cryotalis', '_blank')">>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patreon&nbsp;&nbsp;&nbsp;&nbsp;</button>	
 <div class="topnav">
-    <button class="discord" type="button" onclick="window.open('https://discordapp.com/api/oauth2/authorize?client_id=585514230967566338&permissions=470149184&scope=bot', '_blank')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add Europa</button>	 
-    <button class="patreon" type="button" onclick="window.open('https://www.patreon.com/cryotalis', '_blank')">>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patreon&nbsp;&nbsp;&nbsp;&nbsp;</button>	
-    <a class="active" href="index.html">Home</a>
-    <a href="patch.html">Patch Notes</a>
-    <a href="upcoming.html">Upcoming</a>
-    <a href="index.html#contact">Contact</a>
+  <a class="active" href="index.html">Home</a>
+  <a href="patch.html">Patch Notes</a>
+  <a href="upcoming.html">Upcoming</a>
+  <a href="index.html#contact">Contact</a>
 </div>
 <button onclick="window.location.href = '#home';" id="myBtn" title="Go to top">Top</button>
 <script>
-        //Get the button:
-        mybutton = document.getElementById("myBtn");
-        
-        // When the user scrolls down 400px from the top of the document, show the button
-        window.onscroll = function() {scrollFunction()};
-        
-        function scrollFunction() {
-          if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-            mybutton.style.display = "block";
-          } else {
-            mybutton.style.display = "none";
-          }
-        }
+  //Get the button:
+  mybutton = document.getElementById("myBtn");
+  
+  // When the user scrolls down 400px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  $(document).ready(function() {
+    $('[data-toggle="toggle"]').change(function(){
+      $(this).parents().next('.hide').toggle();
+    });
+  }); 
 </script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<br><br><br>
-<img style="float:left;margin-left: 450px;border-radius:50%;" src="https://i.imgur.com/f0MfwDw.png"/>
-<h1 style="text-align:left; font-size:300%; margin-left:600px;" id="Title">Europa</h1>
-<h4 style="text-align:left;margin-top: -30px;margin-left:601px;">Discord Bot for Granblue Fantasy. Made by ❄Cryo❄#4704.</h4>
-<br>
-<h1>Commands<hr></h1>
+<div style="margin:auto;width:610px;margin-top:60px">
+  <img style="float:left;border-radius:50%;" src="https://i.imgur.com/f0MfwDw.png"/>
+  <div style="float:left;">
+    <h1 style="font-size:300%;margin-left: 25px;margin-top:20px" id="Title">Europa</h1>
+    <h4 style="text-align:left;margin-left: 27px;margin-top:-30px">Discord Bot for Granblue Fantasy. Made by ❄Cryo❄#4704.</h4>
+  </div>
+</div>
+<h1 style="margin-top: 230px;">Commands<hr></h1>
 <h2>General Commands</h2>
 <table>
-	<tr>
-	  <th style="width: 400px;background-color:#0475b3;color:white">Command</th>
-	  <th style="width: 600px;background-color:#0475b3;color:white">Description</th>
-	  <th style="width: 240px;background-color:#0475b3;color:white">Examples</th>
-	  <th style="width: 200px;background-color:#0475b3;color:white">Shortcuts</th>
-	</tr>
-	<tr>
-	  <td>$spark [set/+/-] [crystals/tickets/10parts] [number]</td>
-	  <td>Allows you to manage your spark profile. You may set all 3 resources with one command by using <b>$spark set X crystals, Y tickets, Z 10parts</b>. If you prefer the legacy look of the spark profile, use <b>$sparkle</b> instead.</td>
-	  <td>$spark crystals set 420 <br>$spark tix +1 <br>$spark xtals minus 3000</td>
-	  <td>Crystals ⇄ xtals <br>Tickets ⇄ tix <br>10parts ⇄ 10tix or 10p</td>
-	</tr>
-	<tr>
-	  <td>$spark [create/reset/delete/profile] [user]</td>
-	  <td>Allows you to create, reset, delete, or display your spark profile. Also allows you to search for and display someone else's spark profile. If you prefer the legacy look of the spark profile, use <b>$sparkle</b> instead.</td>
-	  <td>$spark profile<br>$spark create<br>$spark profile Cryo</td>
-	  <td>$spark profile ⇄ $spark</td>
-  </tr>
-  <tr>
-	  <td>$spark background [link]</td>
-	  <td>Sets a custom background for your spark profile. Using <strong>$spark background</strong> without a link will reset your background to the default background. You can also set your background by uploading an image along with the command.</td>
-	  <td>$spark background [img link]</td>
-	  <td></td>
-	</tr>
-  <tr>
-    <td>$crew [name/id] [CrewName/CrewID]</td>
-    <td>Searches for a crew given crew name or crew ID.</td>
-    <td>$crew name Mint<br>$crew id 1655580</td>
-    <td></td>
-	</tr>
-  <tr>
-    <td>$player [name/id] [PlayerName/PlayerID]</td>
-    <td>Searches for a player given player name or player ID.</td>
-    <td>$player name Europa<br>$player id 21213996</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>$events</td>
-    <td>Displays current and upcoming events. Use <strong>$event</strong> if you prefer the text only version of the command.</td>
-    <td>$events</td>
-    <td></td>
-  </tr>
-  <tr>
-	  <td>$translate [text] to [language]</td>
-	  <td>Translates the given text to the given language. If language is not given, output text will be in English. Supports most languages supported by Google Translate.</td>
-	  <td>$translate 雪花 to Japanese<br>$translate エウロペ</td>
-	  <td></td>
-  </tr>
-  <tr>
-    <td>$ask</td>
-    <td>Ask Europa a yes/no question.</td>
-    <td>$ask do I yeet rolls?</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>$choose</td>
-    <td>Ask Europa to choose between 2 or more things.</td>
-    <td>$choose homework, gbf</td>
-    <td></td>
-  </tr>
-  <tr>
-	  <td>$time</td>
-	  <td>Displays the current time in Japan.</td>
-	  <td>$time</td>
-	  <td></td>
-	</tr>
-  <tr>
-    <td>$feedback [feedback]</td>
-    <td>Send feedback for Europa to me.</td>
-    <td>$feedback Europa is awesome!</td>
-    <td></td>
-	</tr>
-  <tr>
-    <td>$bugreport [bug]</td>
-    <td>Report a bug to me.</td>
-    <td>$bugreport $spark isn't working.</td>
-    <td></td>
-  </tr>
-	<tr>
-		<td>$help</td>
-		<td>Displays a link to this website and a link to Europa's support server.</td>
-		<td>$help</td>
-		<td></td>
-	</tr>
-	<tr>
-	  <td>=greeting [msg/bg/channel/display/on/off]</td>
-	  <td>Allows an Administrator to customize and turn on/off the welcome message for new members. Use <b>@member</b> in your message if you'd like the new member to be pinged. BG accepts both image links and image uploads. Set BG to <b>default</b> for the default background. Channel accepts both channel ID and channel mentions. Greeting is off by default.</td>
-	  <td>=greeting msg Welcome to the server, @member!<br>=greeting bg [image link]<br>=greeting on<br>=greeting channel #welcome</td>
-	  <td>$greeting on/off ⇄ $greeting</td>
-	</tr>
+  <thead>
+    <tr>
+      <th style="width: 25%;background-color:#0475b3;color:white">Command</th>
+      <th style="width: 45%;background-color:#0475b3;color:white">Description</th>
+      <th style="width: 15%;background-color:#0475b3;color:white">Examples</th>
+      <th style="width: 15%;background-color:#0475b3;color:white">Shortcuts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>$spark [set/+/-] [crystals/tickets/10parts] [number]</td>
+      <td>Allows you to manage your spark profile. You may set all 3 resources with one command by using <b>$spark set X crystals, Y tickets, Z 10parts</b>. If you prefer the legacy look of the spark profile, use <b>$sparkle</b> instead.</td>
+      <td>$spark crystals set 420 <br>$spark tix +1 <br>$spark xtals minus 3000</td>
+      <td>Crystals ⇄ xtals <br>Tickets ⇄ tix <br>10parts ⇄ 10tix or 10p</td>
+    </tr>
+    <tr>
+      <td>$spark [create/reset/delete/profile] [user]</td>
+      <td>Allows you to create, reset, delete, or display your spark profile. Also allows you to search for and display someone else's spark profile. If you prefer the legacy look of the spark profile, use <b>$sparkle</b> instead.</td>
+      <td>$spark profile<br>$spark create<br>$spark profile Cryo</td>
+      <td>$spark profile ⇄ $spark</td>
+    </tr>
+    <tr>
+      <td>$spark background [link]</td>
+      <td>Sets a custom background for your spark profile. Using <strong>$spark background</strong> without a link will reset your background to the default background. You can also set your background by uploading an image along with the command.</td>
+      <td>$spark background [img link]</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>$crew [name/id] [CrewName/CrewID]</td>
+      <td>Searches for a crew given crew name or crew ID.</td>
+      <td>$crew name Mint<br>$crew id 1655580</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>$player [name/id] [PlayerName/PlayerID]</td>
+      <td>Searches for a player given player name or player ID.</td>
+      <td>$player name Europa<br>$player id 21213996</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>$events</td>
+      <td>Displays current and upcoming events. Use <strong>$event</strong> if you prefer the text only version of the command.</td>
+      <td>$events</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>$translate [text] to [language]</td>
+      <td>Translates the given text to the given language. If language is not given, output text will be in English. Supports most languages supported by Google Translate.</td>
+      <td>$translate 雪花 to Japanese<br>$translate エウロペ</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>$ask</td>
+      <td>Ask Europa a yes/no question.</td>
+      <td>$ask do I yeet rolls?</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>$choose</td>
+      <td>Ask Europa to choose between 2 or more things.</td>
+      <td>$choose homework, gbf</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>$time</td>
+      <td>Displays the current time in Japan.</td>
+      <td>$time</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>$feedback [feedback]</td>
+      <td>Send feedback for Europa to me.</td>
+      <td>$feedback Europa is awesome!</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>$bugreport [bug]</td>
+      <td>Report a bug to me.</td>
+      <td>$bugreport $spark isn't working.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>$help</td>
+      <td>Displays a link to this website and a link to Europa's support server.</td>
+      <td>$help</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>=greeting [msg/bg/channel/display/on/off]</td>
+      <td>Allows an Administrator to customize and turn on/off the welcome message for new members. Use <b>@member</b> in your message if you'd like the new member to be pinged. BG accepts both image links and image uploads. Set BG to <b>default</b> for the default background. Channel accepts both channel ID and channel mentions. Greeting is off by default.</td>
+      <td>=greeting msg Welcome to the server, @member!<br>=greeting bg [image link]<br>=greeting on<br>=greeting channel #welcome</td>
+      <td>$greeting on/off ⇄ $greeting</td>
+    </tr>
+  </tbody>
 </table>
 <h2>Role Commands</h2>
 <table>
