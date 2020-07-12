@@ -56,6 +56,21 @@ button.patreon:hover {
   width:430px;
 }
 
+@media screen and (max-width:800px){
+  .topnav {
+    position:absolute;
+    top:70px;
+    left:10px;
+  }
+  button.discord{
+    top:8px;
+  }
+  button.patreon{
+    top:8px
+  }
+  
+}
+
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
