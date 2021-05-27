@@ -9,88 +9,127 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <button class="discord" type="button" onclick="window.open('https://discordapp.com/api/oauth2/authorize?client_id=585514230967566338&permissions=470149184&scope=bot', '_blank')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add Europa</button>	 
-  <button class="patreon" type="button" onclick="window.open('https://www.patreon.com/cryotalis', '_blank')">>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patreon&nbsp;&nbsp;&nbsp;&nbsp;</button>	
-  <div class="topnav">
-    <a href="index.html">Home</a>
-    <a class="active" href="patch.html">Patch Notes</a>
-    <a href="upcoming.html">Upcoming</a>
-    <a href="index.html#contact">Contact</a>
-  </div>
-  <button onclick="window.location.href = '#home';" id="myBtn" title="Go to top">Top</button>
-  <script>
-    //Get the button:
-    mybutton = document.getElementById("myBtn");
-    
-    // When the user scrolls down 400px from the top of the document, show the button
-    window.onscroll = function() {scrollFunction()};
-    
-    function scrollFunction() {
-      if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-        mybutton.style.display = "block";
-      } else {
-        mybutton.style.display = "none";
-      }
-    }
-  
-    $(document).ready(function() {
-      $('[data-toggle="toggle"]').change(function(){
-        $(this).parents().next('.hide').toggle();
-      });
-    }); 
-  </script>
-  <div class="Europa" style="position:relative;margin:auto;width:610px;margin-top:15px">
-    <img style="float:left;border-radius:50%" src="https://i.imgur.com/f0MfwDw.png"/>
-    <div style="float:left;">
-      <h1 style="font-size:300%;margin-left: 25px;margin-top:20px" id="Title">Europa</h1>
-      <h4 style="text-align:left;margin-left: 27px;margin-top:-30px">Discord Bot for Granblue Fantasy. Made by ❄Cryo❄#4704.</h4>
+  <div class="menu">
+    <div>
+      <button class="invite discord" onclick="window.open('https://discordapp.com/api/oauth2/authorize?client_id=585514230967566338&permissions=470149184&scope=bot', '_blank')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add Europa</button>	 
+      <button class="invite paypal" onclick="window.open('https://www.paypal.com/paypalme/cryodev', '_blank')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Donate&nbsp;&nbsp;&nbsp;&nbsp;</button>	
+    </div>
+    <div class="topnav">
+      <a href="index.html">Home</a>
+      <a class="active" href="patch.html">Patch Notes</a>
+      <a href="upcoming.html">Upcoming</a>
+      <a href="privacyPolicy.html">Privacy Policy</a>
+      <a href="index.html#contact">Contact</a>
     </div>
   </div>
-<h1 style="margin-top: 170px;">What's New? (Update V2)<hr></h1>
-<h3>New Role System</h3>
-<p>Your typical role system. Administrators can add/remove roles to/from a list of roles with =roles. Regular users can view <br>the list of roles with $listroles, add roles to themself with $addrole, and remove roles from themself with $removerole. <br>Additionally, Administrators can organize roles into groups by adding them to a category.</p>
-<img src="https://i.imgur.com/kXep2xu.png">
-<h3>New Events Commands</h3>
-<p>$event displays a plain text list of current and upcoming events, while $events displays a list of current and upcoming events with images.</p>
-<div class="row">
-  <div class="column">
-    <br><br>
-    <img src="https://i.imgur.com/gWwbbPs.png" alt="Event">
+  
+  <button onclick="window.location.href = '#home';" id="myBtn" title="Go to top">Top</button>
+  <div class="Europa">
+    <div>
+      <img style="border-radius:50%" src="https://cdn.discordapp.com/attachments/659229575821131787/845435632385916948/EuropaS1PFP.png"/>
+    </div>
+    <div style="margin-top: -0.5vw;">
+      <h1>Europa</h1>
+      <h4>Discord Bot for Granblue Fantasy. Made by Cryo#4704.</h4>
+    </div>
   </div>
-  <div class="column">
-    <img src="https://i.imgur.com/7UzMc1o.png" alt="Events">
-  </div>
-</div>
-<h3>Set Custom Spark Backgrounds</h3>
-<p>You can now set a custom background for your spark profile.</p>
-<h3>New "Fun" Commands</h3>
-<p>$ask Europa a question, or ask Europa to $choose between two or more things. </p>
+<h1>What's New? (Update V3)<hr></h1>
+<h3>Database Migration</h3>
+<p>The way greeting settings and role settings are stored were changed in this update. I've done my best to migrate everyone's data over properly, but if you notice that you're now missing your greeting data or roles data from before, feel free to reach out to me to get your data migrated properly.</p>
+<h3>$summons</h3>
+<p>Generates an image that shows all your support summons, your player name, and your player ID.</p>
+<img src="https://media.discordapp.net/attachments/659229575821131787/847534867499450388/CryoSupportSummons.png?width=960&height=332">
+<h3>$roll</h3>
+<p>Gacha simulator that automatically stays up to date with the current banner. (The one below is from 5/23/2021)</p>
+<img src="https://cdn.discordapp.com/attachments/659229575821131787/847537262249902110/unknown.png">
+<h3>=announce and =announcements</h3>
+<p>Allows you to have Europa make announcements at certain times as well as repeat those announcements at a specified interval. This might be useful for announcing striketimes or dailies etc.</p>
+<h3>$remind and $reminders</h3>
+<p>It's the announcements system except you get reminders private messaged to you instead :)</p>
+<h3>$mock and $drunk</h3>
+<p>cpnVErts TEXU INtO mOcLinG sPpngebOb teXT or dRUnk texu.</p>
+<h3>$question</h3>
+<p>Generates a random conversation question.</p>
+<h3>$role</h3>
+<p>Gives you the role you specified if you didn't already have it, and removes it from you if you already did have it.</p>
+<h3>=prefix and =modprefix</h3>
+<p>Allows you to set a custom prefix or mod prefix for your server.</p>
+<h3>=disable and =enable</h3>
+<p>Allows you to blacklist or whitelist commands across the server or in certain channels. Whitelisting is slightly more advanced, see the corresponding Advanced Usage Tips and Information section for more info.<br>Also, =disabled shows you which commands are disabled on your server.</p>
+<h3>@Europa</h3>
+<p>Ping Europa and she'll tell you what the current prefix and mod prefix is on your server.</p>
 <br><i style="font-size: small;">For information on how to use any of these commands, please see the command list.</i>
 <br><br>
 <h1>Changes and Improvements<hr></h1>
+<strong>Website Redesign</strong>
+<ul>
+  <li>Shortcuts column was removed because it was taking up unnecessary space</li>
+  <li>Shortcuts and other additional usage tips are now placed in the description in a collapsible</li>
+  <li>The website should be a lot more useable on more screen sizes</li>
+</ul>
+<strong>$spark</strong>
+<ul>
+  <li>Added new progress bars for those who have reached over 200% spark progress.</li>
+  <li>Europa will now congratulate you if you saved up more than one spark whereas previously she didn't say anything.</li>
+  <li>$spark create has been removed, using any $spark command will now automatically create a profile for you if you didn't already have one.</li>
+  <li>Nickname updater now updates your nickname across ALL servers you and Europa share.</li>
+  <li>$spark can now accept a larger variety of formats. All previous formats still work.</li>
+  <li>You can now search for another user's spark profile by simply using $spark [name]</li>
+  <li>You can now use a bookmarklet to copy a spark command to your clipboard with all your resources filled in (See the corresponding Advanced Usage Tips and Information for more info).</li>
+  <li>$spark background will now reject your background if it is invalid</li>
+  <li>$sparkle output will have a format that takes into account whether you're on PC or Mobile, although this is still a work in progress and is not perfect.</li>
+</ul>
 <strong>$player and $crew</strong>
 <ul>
-    <li>The "Maximum Capacity Reached" error message should appear less often, and capacity should now be freed faster.</li>
-    <li>Added page number to player search when searching by name.</li>
-    <li>Added error message for when GBF is undergoing maintenance.</li>
-    <li>Player ID is now included in the screenshot in place of class name and class level.</li>
-    <li>Crew ID is now placed underneath Crew name in the embedded message, and is also placed at the top of the screenshot.</li>
-    <li>Improved speed and stability.</li>
+  <li>$player now includes all support summons, and has an improved formatting for the star character as well.</li>
+	<li>$player and $crew commands should now be more stable and reliable than before, although this is something that is currently still being worked on.</li>
+</ul>
+<strong>=greeting</strong>
+<ul>
+  <li>Now has an Auto-Role feature (automatically assigns roles to members who join the server)</li>
+  <li>Join message, leave message, ban message, autorole, and join image can now all be turned on or off individually.</li>
+  <li>You can now customize the leave message and ban message in addition to the join message. </li>
+  <li>=greeting background will now reject your background if it is invalid</li>
+</ul>
+<strong>Role System</strong>
+<ul>
+    <li>Roles now keep up with name changes in the role list.</li>
+    <li>$listroles now shows a mention of the roles on the roles list so that roles are easier to find (this does not actually ping members of your server).</li>
+</ul>
+<strong>$events</strong>
+<ul>
+  <li>Improved output of $events and $event, and improved reliability of $events.</li>
+  <li>$events will now show a random banner image for the current event if there are multiple banner images for that event.</li>
+  <li>$events and $event now show the elemental advantage for any event with an elemental advantage (GW, Proving Grounds, etc).</li>
 </ul>
 <strong>Miscellaneous</strong>
 <ul>
-    <li>$help command now sends the website link to the channel the command was called in instead of sending a DM.</li>
-    <li>Leave and ban messages have been added to the $greeting system.</li>
-    <li>Replaced the <strong>FAQ</strong> page with the <strong><a href="upcoming.html" style="color:cornflowerblue">Upcoming</a></strong> page. The <strong><a href="upcoming.html" style="color:cornflowerblue">Upcoming</a></strong> page will contain information about future plans with <br>regards to Europa.</li>
+	<li>Commands that allow you to list multiple things ($choose, $addrole, $removerole, etc) now allow you to separate your list with other characters such as slashes or periods among others.</li>
+	<li>$time now allows you to convert a date/time from one time zone to another.</li>
+	<li>Added various shortcuts for various commands.</li>
 </ul> 
 <br>
 <h1>Bug Fixes<hr></h1>
 <ul>
-    <li>Feedback and Bugreport commands now send an error message when the bug report or feedback is left blank.</li>
-    <li>Player search by name no longer requires the Manage Messages permission to work correctly. It will continue running<br>without clearing all reactions if Europa is not given the Manage Messages permission.</li>
-    <li>Fixed bug where spark profile names were not being centered when using spark profile search.</li>
-    <li>You can no longer set your spark count to a negative number.</li>
+  <li>$spark and the greeting system will no longer fail if you had set an invalid background (it shouldn't be possible for you to set an invalid background anymore anyway)</li>
+  <li>$events and $event now show the correct element advantage for all events with an element advantage (GW, Proving Grounds, etc)</li>
+  <li>I fixed a lot of other stuff but honestly I don't remember the rest and digging them up would be too much of a headache so, "A lot of other bug fixes" :)</li>
 </ul>
 <br><br><br><br><br>
+<script>
+  //Get the button:
+  mybutton = document.getElementById("myBtn");
+  
+  // When the user scrolls down 400px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+</script>
 </body>
 </html>
