@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-us" class="has-background-dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Europa - News</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel = "stylesheet" type = "text/css" href = "styles.css"/>
+  <link rel="icon" href="images/SummerEuropaPFPSmall.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(() => $("#nav-bar").load("nav.html"))
+  </script>
+</head>
+
+<body>
+  <div id="nav-bar"></div>
+  
+  <div class="container">
+    <h1 class="title is-2 has-text-light">The Slash Command Update (August 2022)<hr></h1>
+    <div class="content has-text-grey-light">
+      <ul>
+        <li>
+          <strong>The current command documentation may be insufficient. And I apologize for that. If you have any questions, please visit the support server.</strong>
+        </li>
+        <li>
+          This website has received a redesign, and several new pages have been added.
+        </li>
+        <li>
+          Support for message commands (commands that use <strong>$</strong> or <strong>=</strong>) has ended. Due to changes made by Discord, only slash commands will be supported going forward. If slash commands do not work on your server, please click the "Add To Server" button. It will prompt you to enable slash commands. <u>You don't need to kick and re-invite Europa to enable slash commands.</u>
+        </li>
+        <li>
+          Two new commands have been added:
+          <ul>
+            <li>
+              <code>banner</code> - shows you the duration, featured characters, and rate ups on the current banner.
+            </li>
+            <li>
+              <code>translate text</code> - translates a message to your own language. Run this command by right clicking on a message, hovering over Apps, and clicking "translate text"
+            </li>
+          </ul>
+        </li>
+        <li>
+          As a result of switching to slash commands, several commands were improved because they were rewritten or refactored:
+          <ul>
+            <li>
+              <code>player</code> and <code>crew</code> commands should now work again. I am still investigating issues with memory that cause them to sometimes stop working.
+            </li>
+            <li>
+              <code>player</code> generates the player image noticeably faster than before, because images are now loaded in parallel rather than in sequence.
+            </li>
+            <li>
+              <code>player</code> name search is now significantly faster, because it now uses an API rather than visiting a website.
+            </li>
+            <li>
+              <code>crew</code> name search is also significantly faster now for the same reason as above.
+            </li>
+            <li>
+              <code>events</code> generates the events image faster now, as it now loads the images in parallel rather than in sequence.
+            </li>
+            <li>
+              <code>events</code> now shows a Discord timestamp for when the events end for the embedded message version.
+            </li>
+            <li>
+              <code>spark</code> and <code>greeting</code> will now automatically find the direct imgur image link if you provide an imgur link, whereas previously Europa would fail to grab the image unless you provided the direct link.
+            </li>
+            <li>
+              <code>spark</code> now tells you how many rolls you gained or lost when you update your spark funds.
+            </li>
+            <li>
+              <code>translate</code> now translates to your language (the language you have set through Discord) by default.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Several commands have been merged with others or removed:
+          <ul>
+            <li>
+              <code>event</code> has been merged with <code>events</code>, and is now accessible through a slash command option.
+            </li>
+            <li>
+              <code>summons</code> has been merged with <code>player</code>, and is now accessible through a slash command option.
+            </li>
+            <li>
+              <code>addrole</code> and <code>removerole</code> have been removed in favor of <code>role</code>.
+            </li>
+            <li>
+              <code>roles</code> (the mod command) has been renamed to <code>rolelist</code> to avoid confusion with <code>role</code>.
+            </li>
+          </ul>
+        </li>
+        <li>
+          The <code>feedback</code> and <code>bugreport</code> commands have been removed. Going forward, feedback and bug reports for Europa should be sent to the <a class="has-text-link" href="https://discordapp.com/invite/YtwzVSp">Europa Support Server</a> instead. It's easier for me to respond to reports and feedback this way as well.
+        </li>
+        <li>
+          The <strong>custom prefix</strong> and <strong>blacklist/whitelist commands</strong> features have been removed. Since Europa has switched to slash commands, the only prefix now is <strong>/</strong>, and slash commands can be whitelisted and blacklisted through Discord settings (<code>Server Settings</code> > <code>Integrations</code> > <code>Europa</code> > <code>Manage</code>).
+        </li>
+        <li>
+          The <strong>announcements</strong> and <strong>reminders</strong> commands are currently unavailable. I am still working on bringing them over to Europa V4, but I just wanted to get this update out earlier so people have time to switch to slash commands.
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <footer class="footer has-background-dark">
+    <div class="content has-text-centered has-text-white">
+      <p id="contact">
+        Got a concern, suggestion, or request? Join the <a class="has-text-link" href="https://discordapp.com/invite/YtwzVSp">Europa Support Server</a>.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

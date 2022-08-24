@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+  <script>
+    $(document).ready(() => {
+
+      // Check for click events on the navbar burger icon
+      $(".navbar-burger").click(() => {
+
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          $(".navbar-burger").toggleClass("is-active")
+          $(".navbar-menu").toggleClass("is-active")
+
+      })
+
+      $(".delete").click(() => {
+        $(".modal").removeClass("is-active")
+        localStorage.setItem('popState','shown')
+      })
+
+      if (localStorage.getItem('popState') != 'shown'){
+        $(".modal").addClass("is-active")
+      }
+    })
+  </script>
+</head>
+
+<body>
+
+<div class="container">
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="index.html">
+        <img src="https://cdn.discordapp.com/attachments/647256353844232202/1011693292871749763/EuropaLogo.png" width="112" height="28">
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="europaNavbar">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    
+    <div id="europaNavbar" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="index.html">Home</a>
+        <a class="navbar-item" href="commands.html">Commands</a>
+        <a class="navbar-item" href="news.html">News</a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">More</a>
+
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="terms.html">Terms of Use</a>
+            <a class="navbar-item" href="terms.html#privacy-policy">Privacy Policy</a>
+            <a class="navbar-item" href="about.html">About</a>
+            <a class="navbar-item" href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-link" onclick="window.open('https://discord.com/api/oauth2/authorize?client_id=585514230967566338&permissions=402966592&scope=bot%20applications.commands', '_blank')">
+              <strong>Add To Server</strong>
+            </a>
+            <a class="button is-warning" onclick="window.open('https://www.paypal.com/paypalme/cryodev', '_blank')">
+              <strong>Donate</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-vcentered">
+      <div class="column is-two-fifths">
+        <figure class="image is-128x128 is-pulled-right">
+          <img class="is-rounded" src="images/SummerEuropaPFPSmall.png">
+        </figure>
+      </div>
+      <div class="column">
+        <h1 class="title is-1 has-text-light">Europa</h1>
+        <h2 class="subtitle has-text-grey-light">Discord Bot for Granblue Fantasy. Created by Cryo#4704.</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <article class="message is-danger">
+      <div class="message-header">
+        <p>Warning</p>
+        <button class="delete" aria-label="delete"></button>
+      </div>
+      <div class="message-body">
+        Support for message commands (commands that use <strong>$</strong> or <strong>=</strong>) has ended. Due to changes made by Discord, only slash commands will be supported going forward. If slash commands do not work on your server, please click the "Add To Server" button. It will prompt you to enable slash commands. <u>You don't need to kick and re-invite Europa to enable slash commands.</u>
+      </div>
+    </article>
+  </div>
+</div>
+
+</body>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en-us" class="has-background-dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Europa - Terms of Use</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel = "stylesheet" type = "text/css" href = "styles.css"/>
+  <link rel="icon" href="images/SummerEuropaPFPSmall.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(() => $("#nav-bar").load("nav.html"))
+  </script>
+</head>
+
+<body>
+  <div id="nav-bar"></div>
+    
+  <div class="container">
+    <h1 class="title is-2 has-text-light">Terms of Use<hr></h1>
+    <div class="content has-text-grey-light">
+      <ul>
+        <li>
+          I am not responsible for your use of Europa, this includes but is not limited to the posting of content through Europa commands and features.
+        </li>
+        <li>
+          You are not to misuse Europa by any means. This includes rapidly spamming commands, posting inappropriate content through Europa, etc.
+        </li>
+        <li>
+          If I find that you are misusing Europa, you will be completely banned from using any Europa commands or features.
+        </li>
+        <li>
+          I reserve the right to ban anyone for any reason from using Europa. Nobody has ever been banned, so don't be the first!
+        </li>
+      </ul>
+    </div>
+    <br>
+    <h1 id="privacy-policy" class="title is-2 has-text-light">Privacy and Data Usage Policy<hr></h1>
+    <div class="content has-text-grey-light">
+      <p class="has-text-light">I don't collect any data other than what is necessary, and of course, I don't sell your data. Here are all the details regarding data collection:</p>
+      <ul>
+        <li>
+          Europa's database is partially available at <a class="has-text-link" href="https://docs.google.com/spreadsheets/d/1H5oCUOvKSN5AAo_tQvr7ElhDIJxhuYVpaJCbbyFeA0E" target="_blank" style="color:cornflowerblue">Europa Database</a>. Anyone may view and make use of the information in the database. The private portion of the database (it is a separate spreadsheet) contains server settings information for the <code>greeting</code> and <code>role</code> commands, <code>spark</code> profile information, and <code>announcement/reminders</code> information. Obviously, whatever you submit to the aforementioned commands will be stored in the database so Europa can call upon the information when you run commands.
+        </li>
+        <li>
+          Previously, Europa stored translated text in the private database, as the old <code>translate</code> command relied upon Google Spreadsheet formulas. It now uses Google's Cloud Translate API, so all translated text in the database has been deleted.
+        </li>
+        <li>
+          When someone uses a command, Europa logs what command it was, when it was used, and the server name and server ID of the server it was used in. This is for debugging purposes. Here's an example of what that looks like:
+          <br>
+          <img class="bordered" src="https://cryotalis.github.io/Europa/images/EuropaLog.PNG">
+        </li>
+        <li>
+          If you would like to make a request to have your data deleted for any reason, please contact me through the <a class="has-text-link" href="https://discordapp.com/invite/YtwzVSp">Europa Support Server</a>. Usual response time is 1 Day.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="footer has-background-dark">
+    <div class="content has-text-centered has-text-white">
+      <p id="contact">
+        Got a concern, suggestion, or request? Join the <a class="has-text-link" href="https://discordapp.com/invite/YtwzVSp">Europa Support Server</a>.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
