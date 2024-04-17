@@ -1,3 +1,3 @@
-### Have any Suggestions or Problems?
+### Contact
 
-Got a suggestion, or found a problem? Join my [Discord Server](https://discord.gg/jtaEBF4) or contact me directly via PM on Discord at Cryo#4704.
+Got a suggestion, found a problem, or just want to talk? Join the [Support Server](https://discord.gg/YtwzVSp).
